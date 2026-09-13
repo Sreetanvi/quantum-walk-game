@@ -1,0 +1,29 @@
+{
+  "id": "03_measurement",
+  "title": "Measurement",
+  "order": 3,
+  "mode": "2d",
+  "width": 7,
+  "height": 7,
+  "step_limit": 10,
+  "target_p_goal": 0.2,
+  "allowed_ops": ["H", "X", "Z"],
+  "observation_threshold": 0.51,
+  "start": { "x": 1, "y": 1, "coin": "E" },
+  "walls": [
+    {"x": 0, "y": 0}, {"x": 1, "y": 0}, {"x": 2, "y": 0}, {"x": 3, "y": 0}, {"x": 4, "y": 0}, {"x": 5, "y": 0}, {"x": 6, "y": 0},
+    {"x": 0, "y": 1}, {"x": 6, "y": 1},
+    {"x": 0, "y": 2}, {"x": 2, "y": 2}, {"x": 3, "y": 2}, {"x": 4, "y": 2}, {"x": 6, "y": 2},
+    {"x": 0, "y": 3}, {"x": 6, "y": 3},
+    {"x": 0, "y": 4}, {"x": 2, "y": 4}, {"x": 3, "y": 4}, {"x": 4, "y": 4}, {"x": 6, "y": 4},
+    {"x": 0, "y": 5}, {"x": 6, "y": 5},
+    {"x": 0, "y": 6}, {"x": 1, "y": 6}, {"x": 2, "y": 6}, {"x": 3, "y": 6}, {"x": 4, "y": 6}, {"x": 5, "y": 6}, {"x": 6, "y": 6}
+  ],
+  "traps": [{ "x": 5, "y": 1 }],
+  "goals": [{ "x": 5, "y": 5 }],
+  "observations": [{ "x": 3, "y": 1 }],
+  "copy": {
+    "short": "Walls bounce. The camera looks. Traps only count after collapse.",
+    "detail": "On a grid, H is the Grover coin — it mixes N/E/S/W. Walking east as a pawn hits the observation tile in the top hall. Spread with Grover, raise P(goal) ≥ 20%, then choose when to Measure. Walls never collapse you."
+  }
+}

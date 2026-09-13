@@ -1,0 +1,19 @@
+{
+  "id": "01_superposition",
+  "title": "Superposition",
+  "order": 1,
+  "mode": "1d",
+  "width": 11,
+  "height": 1,
+  "step_limit": 6,
+  "target_p_goal": 0.7,
+  "allowed_ops": ["H", "X"],
+  "start": { "x": 5, "y": 0, "coin": "R" },
+  "walls": [],
+  "traps": [],
+  "goals": [ { "x": 0, "y": 0 }, { "x": 10, "y": 0 } ],
+  "copy": {
+    "short": "H splits you. X flips your heading. Walk moves the wave.",
+    "detail": "Press H, then Quantum Walk — you occupy two cells at once. Cell probabilities come from |amplitude|²; H alone does not move you. X flips left/right. Get P(goal) ≥ 70% within 6 walks, then Measure. Measure is off until you have walked once."
+  }
+}

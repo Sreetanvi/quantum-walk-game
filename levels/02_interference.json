@@ -1,0 +1,21 @@
+{
+  "id": "02_interference",
+  "title": "Interference",
+  "order": 2,
+  "mode": "1d",
+  "width": 21,
+  "height": 1,
+  "step_limit": 8,
+  "target_p_goal": 0.45,
+  "allowed_ops": ["H", "Z"],
+  "observation_threshold": 0.51,
+  "start": { "x": 10, "y": 0, "coin": "R" },
+  "walls": [],
+  "traps": [{ "x": 10, "y": 0 }],
+  "goals": [{ "x": 16, "y": 0 }],
+  "observations": [{ "x": 11, "y": 0 }],
+  "copy": {
+    "short": "A pawn-walk hits the camera. H sneaks past; Z changes later interference.",
+    "detail": "Walking right with no H lands on the observation tile and collapses you. One H, then Quantum Walk, splits the cloud so the camera may miss. Mash H every step and you can pile onto the camera. The start is a trap. Target P(goal) ≥ 45%, then Measure."
+  }
+}

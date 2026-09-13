@@ -1,0 +1,27 @@
+{
+  "id": "04_strategy",
+  "title": "Quantum Maze",
+  "order": 4,
+  "mode": "2d",
+  "width": 9,
+  "height": 7,
+  "step_limit": 15,
+  "target_p_goal": 0.12,
+  "allowed_ops": ["H", "X", "Z"],
+  "start": { "x": 1, "y": 3, "coin": "E" },
+  "walls": [
+    {"x": 0, "y": 0}, {"x": 1, "y": 0}, {"x": 2, "y": 0}, {"x": 3, "y": 0}, {"x": 4, "y": 0}, {"x": 5, "y": 0}, {"x": 6, "y": 0}, {"x": 7, "y": 0}, {"x": 8, "y": 0},
+    {"x": 0, "y": 1}, {"x": 8, "y": 1},
+    {"x": 0, "y": 2}, {"x": 4, "y": 2}, {"x": 8, "y": 2},
+    {"x": 0, "y": 3}, {"x": 4, "y": 3}, {"x": 8, "y": 3},
+    {"x": 0, "y": 4}, {"x": 4, "y": 4}, {"x": 8, "y": 4},
+    {"x": 0, "y": 5}, {"x": 8, "y": 5},
+    {"x": 0, "y": 6}, {"x": 1, "y": 6}, {"x": 2, "y": 6}, {"x": 3, "y": 6}, {"x": 4, "y": 6}, {"x": 5, "y": 6}, {"x": 6, "y": 6}, {"x": 7, "y": 6}, {"x": 8, "y": 6}
+  ],
+  "traps": [{ "x": 7, "y": 1 }],
+  "goals": [{ "x": 7, "y": 3 }],
+  "copy": {
+    "short": "Two ways around the wall. Grover to turn; Z to steer interference.",
+    "detail": "A pillar blocks a straight line to the goal. You cannot steer with WASD — mix with H (Grover), reverse with X, phase with Z. Get P(goal) ≥ 20% before you look. A lucky collapse is not the same as stacking the wave."
+  }
+}

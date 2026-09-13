@@ -1,0 +1,23 @@
+{
+  "id": "05_quantum_strategy",
+  "title": "Quantum Strategy",
+  "order": 5,
+  "mode": "1d",
+  "width": 11,
+  "height": 1,
+  "step_limit": 6,
+  "op_limit": 8,
+  "target_p_goal": 0.5,
+  "allowed_ops": ["H", "X", "Z", "S"],
+  "observation_threshold": 0.51,
+  "start": { "x": 5, "y": 0, "coin": "R" },
+  "walls": [],
+  "traps": [{ "x": 0, "y": 0 }],
+  "goals": [{ "x": 10, "y": 0 }],
+  "observations": [{ "x": 6, "y": 0 }],
+  "phase_gates": [{ "x": 8, "y": 0, "gate": "S" }],
+  "copy": {
+    "short": "Limited gates. Stack ≥ 50% on the goal. The camera punishes a pawn-walk.",
+    "detail": "You have 8 coin operations and 6 walks. A bare walk to the right is observed at cell 6. H, then ride the right-moving packet without remashing H, can put 50% on the exit — the left packet is a trap. Z and S change later interference. Then Measure."
+  }
+}
